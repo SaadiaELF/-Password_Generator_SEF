@@ -1,12 +1,11 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var characters = "AZERTYUIOPQSDFGHJKLMWXCVBNazertyuiopqsdfghjklmwxcvbn0123456789+/*-@%";
 var passwordlength = prompt("Please enter the length of the password");
 
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  var password = generatePassword(passwordlength);
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
@@ -32,7 +31,23 @@ document.getElementById("password").maxLength = passwordlength;
  
 };
 
+//Generate random password
+function generatePassword(passwordlength) {
+  var password = "" ;
+  var characters = "AZERTYUIOPQSDFGHJKLMWXCVBNazertyuiopqsdfghjklmwxcvbn0123456789+/*-@%";
+ 
+  for (var i = 0 ; i < passwordlength ; i++)   {
+
+  password += characters.charAt(Math.floor(Math.random() * characters.length));
+ 
+  }
+  return password;
+
+};
+
+
 inputLength()
+generatePassword(passwordlength)
 
 var choiceLowercase = confirm("Do you want to include lowercase letters ?");
 var choiceUppercase = confirm("Do you want to include uppercase letters ?");

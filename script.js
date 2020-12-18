@@ -52,11 +52,21 @@ function generatePassword(passwordlength) {
   if(choiceSpecialCharacters == true) {
   characters+=specialCharacters };
 
-   for (var i = 0 ; i < passwordlength ; i++)   {
+  for (var i = 0 ; i < passwordlength ; i++)   {
     password += characters.charAt(Math.floor(Math.random() * characters.length));
    }
    return password;
 };
 
+//Validate the criteria , if no criteria was chossen send an alert message an refresh the page
+function validateInput() {
+  if ((choiceLowercase == false) && (choiceUppercase == false) && (choiceNumbers == false) && (choiceSpecialCharacters == false))
+  {
+   alert("Please choose at least one criteria");
+   location.reload();
+ }
+  
+};
 
 inputLength()
+validateInput()

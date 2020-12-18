@@ -63,8 +63,13 @@ function validateInput() {
   if ((choiceLowercase == false) && (choiceUppercase == false) && (choiceNumbers == false) && (choiceSpecialCharacters == false))
   {
    alert("Please choose at least one criteria");
-   location.reload();
- }
+   
+    choiceLowercase = confirm("Do you want to include lowercase letters ?");
+    choiceUppercase = confirm("Do you want to include uppercase letters ?");
+    choiceNumbers = confirm("Do you want to include numbers ?");
+    choiceSpecialCharacters = confirm("Do you want to include special characters ?");
+
+    }
   
 };
 

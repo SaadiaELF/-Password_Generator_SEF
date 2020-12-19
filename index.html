@@ -5,17 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Password Generator</title>
+<!--Linking file to CSS file-->
     <link rel="stylesheet" href="./style.css" />
   </head>
+
   <body>
+
+<!--Creating a wrapper-->
     <div class="wrapper">
+
+<!--Creating a header-->      
       <header>
         <h1>Password Generator</h1>
       </header>
+ 
+<!--Creating a card to hold the password output-->      
       <div class="card">
+<!--Creating a card header-->           
         <div class="card-header">
           <h2>Generate a Password</h2>
         </div>
+<!--Creating a card body that includes a textarea-->           
         <div class="card-body">
           <textarea
             readonly
@@ -24,11 +34,17 @@
             aria-label="Generated Password"
           ></textarea>
         </div>
+<!--Creating a card footer to hold the a generate password button-->           
         <div class="card-footer">
           <button id="generate" class="btn">Generate Password</button>
         </div>
+      
       </div>
+    
     </div>
+
+<!--Linking file to Javascript file-->    
     <script src="./script.js"></script>
+
   </body>
 </html>

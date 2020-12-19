@@ -9,8 +9,9 @@ var passwordlength = prompt("Please enter the length of the password");
 function inputLength () {
 // do while loop to prompt an alert message until meeting the length criteria (8 to 128 characters)  
 do { 
+  if (passwordlength < 8 || passwordlength > 128 ) {
     alert("Please enter a length of at least 8 characters and no more than 128 characters");
-    passwordlength = prompt("Please reenter the length of the password")
+    passwordlength = prompt("Please reenter the length of the password");}
 } while (passwordlength < 8 || passwordlength > 128 );
 
 // Assign this length to the password textarea
@@ -68,12 +69,14 @@ function generatePassword (passwordlength) {
 //this function validate the criteria , if no criteria was chosen, it sends an alert message and reshow the confirm windows
 function validateInput() {
   do  {
-   alert("Please choose at least one criteria");
+    if ((choiceLowercase == false) && (choiceUppercase == false) && (choiceNumbers == false) && (choiceSpecialCharacters == false)){
+   
+    alert("Please choose at least one criteria");
    
     choiceLowercase = confirm("Do you want to include lowercase letters ?");
     choiceUppercase = confirm("Do you want to include uppercase letters ?");
     choiceNumbers = confirm("Do you want to include numbers ?");
-    choiceSpecialCharacters = confirm("Do you want to include special characters ?");
+    choiceSpecialCharacters = confirm("Do you want to include special characters ?");}
 
     } while ((choiceLowercase == false) && (choiceUppercase == false) && (choiceNumbers == false) && (choiceSpecialCharacters == false))
 };

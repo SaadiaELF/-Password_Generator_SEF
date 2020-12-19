@@ -1,9 +1,10 @@
+/** padding and border are included in the width and height**/
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-
+/** The height take 100%, with no margin nor padding **/
 html,
 body,
 .wrapper {
@@ -12,17 +13,20 @@ body,
   padding: 0;
 }
 
+/** Personalising the body font and the background colour **/
 body {
   font-family: sans-serif;
   background-color: #f9fbfd;
 }
 
+/** personalising the wrapper's padding : top, left and right **/ 
 .wrapper {
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
 }
 
+/** personalising the header : text alignment, padding and font colour **/ 
 header {
   text-align: center;
   padding: 20px;
@@ -30,6 +34,7 @@ header {
   color: hsl(206, 17%, 28%);
 }
 
+/** personalising the card style : background color, borders, padding, margin, box shadow, width and, font size and colour **/ 
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
@@ -42,6 +47,7 @@ header {
   padding: 30px 40px;
 }
 
+/** personalising the card header : width, background color, height and display the card header as a block   **/ 
 .card-header::after {
   content: " ";
   display: block;
@@ -50,14 +56,17 @@ header {
   height: 2px;
 }
 
+/** Specifing the minum height of the body of the card in 100px**/
 .card-body {
   min-height: 100px;
 }
 
+/** Align the card-footer text in the centre **/
 .card-footer {
   text-align: center;
 }
 
+/** personalising the card header : width, background color, height and display the card header as a block   **/ 
 .card-footer::before {
   content: " ";
   display: block;
@@ -65,13 +74,14 @@ header {
   background: #e7e9eb;
   height: 2px;
 }
-
+/** displaying the card footer as a block   **/ 
 .card-footer::after {
   content: " ";
   display: block;
   clear: both;
 }
 
+/** Personalising the style of the button: borders, shadows, background colour, font colour and size, margin and padding**/
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
@@ -97,6 +107,7 @@ button[disabled] {
   float: right;
 }
 
+/** Personalising the style of the password textarea: borders, font size, margin and padding**/
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -118,6 +129,7 @@ button[disabled] {
   overflow: hidden;
 }
 
+/**Personalising the responsiveness of the page in a screen of 690 px width**/
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
@@ -130,6 +142,7 @@ button[disabled] {
   }
 }
 
+/**Personalising the responsiveness of the page in a screen of 500px width**/
 @media (max-width: 500px) {
   .btn {
     font-size: 0.8rem;

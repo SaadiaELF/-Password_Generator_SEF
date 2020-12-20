@@ -60,7 +60,7 @@ This file is used to personalise the styles by creating new classes and id.
 
 -----------------------------------------------------------------------------------------------------------------------
 
-## 4. JavaScript file : 
+## 5. JavaScript file : 
 
 This file is used to create a dynamic website using functions to generate random password.
 
